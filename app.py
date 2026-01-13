@@ -70,4 +70,4 @@ with gr.Blocks(title="Generate YAML") as demo:
             )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_port=1000, server_name="0.0.0.0")
