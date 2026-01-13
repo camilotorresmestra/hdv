@@ -46,6 +46,8 @@ def process_text(yaml_string, tickle_box=False):  # Added tickle_box argument
          yaml_string += "\n" + tickle_content
     
     save_input_as_yaml(yaml_string, 't.yaml')
+    # concatenate the yanmlk with the engineering resume style yaml if tickle_box is checked
+    os.system('cat engineering_resume_style.yaml >> t.yaml')
     # os execute rendercv render command
     os.system('rendercv render t.yaml')
     return "rendercv_output/Camilo_Torres_Mestra_CV.pdf"
